@@ -1,5 +1,6 @@
 import React from 'react';
 
+import classes from './Recipe.css';
 import Auxiliar from '../../hoc/auxiliar';
 
 const recipe = (props) => (
