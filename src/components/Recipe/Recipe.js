@@ -5,7 +5,7 @@ import Auxiliar from '../../hoc/auxiliar';
 
 const recipe = (props) => (
   <Auxiliar>
-    <tr key={props.name} className={classes.Recipe + " " + (props.isChecked ? classes.active : '')}>
+    <tr key={props.name} className={classes.Recipe + (props.isChecked ? " " + classes.active : '')}>
       <td>
         <input
           type="checkbox"
