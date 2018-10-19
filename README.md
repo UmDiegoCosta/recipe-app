@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Recipe App
+
+This recipe app was bootstrapped with:
+- [Create React App](https://github.com/facebook/create-react-app)
+- Axios
+- CSS Modules
+
+Steps to run the application:
+- Clone or download the app
+- run *npm install* to install all dependencies
+- run *npm start* to start the application
+
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md).
