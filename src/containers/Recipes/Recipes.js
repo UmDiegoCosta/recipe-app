@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import classes from './Recipes.module.css';
 import Recipe from '../../components/Recipe/Recipe';
 
 class Recipes extends Component {
@@ -58,6 +59,7 @@ class Recipes extends Component {
         name={recipe.name}
         type={recipe.type}
         time={recipe.cook_time}
+        isChecked={recipe.checked}
       />
     );
   }
@@ -73,35 +75,38 @@ class Recipes extends Component {
     const flattenedArray = [].concat(...selectedIngredients);
     const uniqueIngredients = [...new Set(flattenedArray)].sort();
     return (
-      <ul>
-        {uniqueIngredients.map((ing, index) => (
-          <li key={index}>{ing}</li>
-        ))}
-      </ul>
+      <div className={classes.IngredientList}>
+        <h4>Ingredients List</h4>
+        <ul className={classes.Ingredients}>
+          {uniqueIngredients.map((ing, index) => (
+            <li key={index}>{ing}</li>
+          ))}
+        </ul>
+      </div>
     );
   }
 
   render() {
     return (
-      <div>
-        <h1>Select Recipes</h1>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Cook Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.allRecipes.map(this.renderAllRecipes)}
-          </tbody>
-        </table>
-
+      <div className={classes.Recipes}>
         <div>
-          {this.renderDistinctIngredients()}
+          <h4>Select Recipes</h4>
+          <table className={classes.RecipesTable}>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Cook Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.allRecipes.map(this.renderAllRecipes)}
+            </tbody>
+          </table>
         </div>
+
+        {this.renderDistinctIngredients()}
       </div>
     );
   };

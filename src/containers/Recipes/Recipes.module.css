@@ -1,0 +1,51 @@
+.RecipesTable {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+.RecipesTable th,
+.RecipesTable td {
+  border: 1px solid #dee2e6;  
+  box-sizing: border-box;
+  padding: .75rem;
+}
+.RecipesTable th {
+  border-bottom: 2px;
+}
+
+.Ingredients {
+  list-style: none;
+  width: 400px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Ingredients li {
+  display: inline-block;
+  background: #79b643;
+  border-radius: 6px;
+  line-height: 10px;
+  padding: 8px;
+  color: white;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 500px) {
+  .Recipes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .RecipesTable {
+    width: auto;
+  }
+
+  .IngredientList {
+    padding-left: 1em;
+  }
+  .Ingredients li {
+    line-height: 15px;
+    padding: 10px;  
+  }
+}

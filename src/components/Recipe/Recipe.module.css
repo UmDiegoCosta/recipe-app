@@ -1,0 +1,16 @@
+.Recipe label {
+	display: block;
+}
+.Recipe label:hover {
+  cursor: pointer;
+}
+.Recipe.active {
+	background-color: #eee;
+}
+.Recipe td:first-child,
+.Recipe th:first-child {
+	text-align: center;
+}
+.Recipe th.active {
+	background-color: #eee;
+}

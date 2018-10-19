@@ -1,11 +1,11 @@
 import React from 'react';
 
-import classes from './Recipe.css';
+import classes from './Recipe.module.css';
 import Auxiliar from '../../hoc/auxiliar';
 
 const recipe = (props) => (
   <Auxiliar>
-    <tr key={props.name}>
+    <tr key={props.name} className={classes.Recipe + " " + (props.isChecked ? classes.active : "")}>
       <td>
         <input
           type="checkbox"
