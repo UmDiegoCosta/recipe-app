@@ -13,7 +13,7 @@ class Recipes extends Component {
 
   componentWillMount() {
     axios
-      .get('https://raw.githubusercontent.com/UmDiegoCosta/paybyphone-test/master/src/json/recipes.json')
+      .get('recipes.json')
       .then(response => {
         const updatedRecipes = response.data;
         updatedRecipes.map((obj) => {
