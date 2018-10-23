@@ -1,16 +1,15 @@
 .Recipe label {
 	display: block;
+	padding: .75rem;
 }
 .Recipe label:hover {
   cursor: pointer;
 }
-.Recipe.active {
+.Recipe.active,
+.Recipe:hover {
 	background-color: #eee;
 }
 .Recipe td:first-child,
 .Recipe th:first-child {
 	text-align: center;
-}
-.Recipe th.active {
-	background-color: #eee;
 }

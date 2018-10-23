@@ -7,11 +7,13 @@ const recipe = (props) => (
   <Auxiliar>
     <tr key={props.name} className={classes.Recipe + (props.isChecked ? " " + classes.active : '')}>
       <td>
-        <input
-          type="checkbox"
-          id={props.name}
-          value={props.name}
-          onChange={props.clicked} />
+        <label htmlFor={props.name}>
+          <input
+            type="checkbox"
+            id={props.name}
+            value={props.name}
+            onChange={props.clicked} />
+        </label>
       </td>
       <td>
         <label htmlFor={props.name}>{props.name}</label>
